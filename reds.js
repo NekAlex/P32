@@ -1,9 +1,10 @@
-const reds = [3,5,6,8,9,17,25,27,28,29,36,40,42,43,46,47,48,
-53,54,60,66,67,69,70,71,72,82,86,92,93,96,98,100,
-101,104,105,110,111,117,120,121,123,124,130,131,132,133,134,136,137,140,142,142,144,145,146,147,149,
-153,155,168,169,171,172,175,182,187,190,192,195,196,200,
+const update = '14.03.2022';
+const reds = [3,5,6,9,17,25,27,28,29,36,40,43,46,47,48,
+53,54,60,66,67,69,70,71,72,82,86,92,96,98,100,
+101,104,105,110,111,117,120,121,124,130,131,133,136,137,140,142,144,145,146,147,149,
+153,155,168,169,171,172,182,187,190,196,200,
 207,217,221,229,236,237,244,249,250,
-251,252,265,272,273,285,286,297,298];
+251,252,265,272,273,286,297];
 
 function makeRed(){
 	reds.forEach((arrayElement, index) => {
@@ -26,6 +27,12 @@ var P32={};
 		ts.attr("font-family","Verdana");
 		ts.attr("font-style","italic");
 		 //paper.print(610, 20, "ПЛАН "+floor.toString()+" ЭТАЖА", paper.getFont("Times",800), 28);
+	}
+	function makeFooter(){
+		const ts = paper.text(610, 700, "обновлено "+updated.toString()+"");
+		ts.attr("font-size","12px");
+		ts.attr("font-family","Verdana");
+		ts.attr("font-style","italic");
 	}
 	function makeData(floor){
 		const LSK_Attr={fill:"#000",stroke:"#000"};
@@ -159,6 +166,7 @@ var P32={};
 			if(elem.attr) r.attr(elem.attr);
 			//MCDU[cod].hover(hoverIn, hoverOut, MCDU[cod], MCDU[cod]);
 		});
+		makeFooter(floor);
 //makeRed2();
 	}
 })(P32)
