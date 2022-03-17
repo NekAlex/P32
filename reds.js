@@ -6,6 +6,8 @@ const reds = [3,5,6,9,17,25,27,28,29,36,40,43,46,47,48,
 207,217,221,229,236,237,244,249,250,
 251,252,265,272,273,286,297];
 
+const greens = [26, 34, 35, 38, 67, 68, 119, 141, 151, 164, 183, 193, 211];
+
 function makeRed(){
 	reds.forEach((arrayElement, index) => {
 		const cod ="mm"+arrayElement.toString().padStart(3,0);
@@ -120,9 +122,13 @@ var P32={};
 		]
 	return data;
 };
-	function fillReds(data,reds){
+	/*function fillReds(data,reds){
 		var filteredArray = data.filter(n => reds.some(n2 => n.id == n2));
 		filteredArray.forEach(elem=>{ elem.attr = {fill:"#F00",stroke:"#000"}});
+	}*/
+	function fillRect(data,reds, fillColor){
+		var filteredArray = data.filter(n => reds.some(n2 => n.id == n2));
+		filteredArray.forEach(elem=>{ elem.attr = {fill:fillColor,stroke:"#000"}});
 	}
 	//Public
 	obj.makeMap = function(floor){
@@ -140,8 +146,8 @@ var P32={};
 		makeHeader(floor);
 		
 		data = makeData(floor);
-		fillReds(data,reds);
-		
+		fillRect(data,reds, "#F00");
+		fillRect(data,greens,"#0F0");
 		data.forEach(elem=>{
 			let cod = "mm"+elem.id.toString().padStart(3,0);
 			paper.setStart();
