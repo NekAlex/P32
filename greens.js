@@ -117,7 +117,7 @@ var P32={};
 };
 	function fillReds(data,reds){
 		var filteredArray = data.filter(n => reds.some(n2 => n.id == n2));
-		filteredArray.forEach(elem=>{ elem.attr = {fill:"#F00",stroke:"#000"}});
+		filteredArray.forEach(elem=>{ elem.attr = {fill:"#0F0",stroke:"#000"}});
 	}
 	//Public
 	obj.makeMap = function(floor){
