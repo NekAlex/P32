@@ -13,7 +13,14 @@ const greens = [1,2,9,10,13,14,23,24,26,30,34,35,38,39,47,49,
 		201,208,211,213,215,218,220,222,239,241,242,246,248,
 		256,258,259,260,262,265,267,270,271,276,277,280,281,282,283,293,295,296,299,300
 	       ];
-
+function getSpace(num){
+	if([50].indexOf(num)==0) return 21.6;
+	if([3,53,103,153,203,253].indexOf(num)>=0) return 19.1;
+	if([15, 38, 65, 88, 115, 138, 165, 188, 215, 238, 265, 288].indexOf(num)>=0) return 20.3;
+	if([41,42,43,44,45,91,92,93,94,95,141,142,143,144,145,191,192,193,194,195,241,242,243,244,245,291,292,293,294,295].indexOf(num)>=0) return 22.3;
+	if([39,40,46,47,48,49, 89,90,96,97,98,99, 139,140,146,147,148,149,189,190,196,197,198,199,239,240,246,247,248,249,289,290,296,297,298,299].indexOf(num)>=0) return 15.5;
+	return 13.3;
+}
 function makeRed(){
 	reds.forEach((arrayElement, index) => {
 		const cod ="mm"+arrayElement.toString().padStart(3,0);
@@ -41,6 +48,11 @@ var P32={};
 		ts.attr("font-size","12px");
 		ts.attr("font-family","Verdana");
 		ts.attr("font-style","italic");
+		
+		const tot = paper.text(30, 700, " "+ greens.length+" "+Math.round(greens.reduce(function(a,b){ return a+getSpace(b);},0)*100)/100);
+		tot.attr("font-size","12px");
+		tot.attr("font-family","Verdana");
+		tot.attr("font-style","italic");
 	}
 	function makeData(floor){
 		const LSK_Attr={fill:"#000",stroke:"#000"};
