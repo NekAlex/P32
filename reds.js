@@ -42,14 +42,14 @@ var P32={};
 		ts.attr("font-family","Verdana");
 		ts.attr("font-style","italic");
 		 //paper.print(610, 20, "ПЛАН "+floor.toString()+" ЭТАЖА", paper.getFont("Times",800), 28);
+		const ts1 = paper.text(610, 40, "обновлено "+updated.toString()+"");
+		ts1.attr("font-size","12px");
+		ts1.attr("font-family","Verdana");
+		ts1.attr("font-style","italic");
 	}
 	function makeFooter(){
-		const ts = paper.text(610, 700, "обновлено "+updated.toString()+"");
-		ts.attr("font-size","12px");
-		ts.attr("font-family","Verdana");
-		ts.attr("font-style","italic");
-		
-		const tot = paper.text(30, 700, " "+ greens.length+" "+Math.round(greens.reduce(function(a,b){ return a+getSpace(b);},0)*100)/100);
+
+		const tot = paper.text(610, 700, " "+Math.round(greens.reduce(function(a,b){ return a+getSpace(b);},0)*100)/100+ "("+greens.length+")");
 		tot.attr("font-size","12px");
 		tot.attr("font-family","Verdana");
 		tot.attr("font-style","italic");
