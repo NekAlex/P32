@@ -22,7 +22,7 @@ function getSpace(num){
 	return 13.3;
 }
 function getStat(){
-	return greens.reduce(function(a,b){ let et = Math.floor((b-1)/50)+2; console.log(et); a[et]=a[et]+1; return a;},{1:0,2:0,3:0,4:0,5:0,6:0});
+	return greens.reduce(function(a,b){ let et = Math.floor((b-1)/50)+2; a[et]=a[et]+1; return a;},{2:0,3:0,4:0,5:0,6:0,7:0});
 }
 function makeRed(){
 	reds.forEach((arrayElement, index) => {
@@ -61,7 +61,7 @@ var P32={};
 		const LSK_Attr={fill:"#000",stroke:"#000"};
 		const fl = (floor-2)*50;
 		const data=[
-		<!-- 4 ряд -->
+		//<!-- 4 ряд -->
 		{id:fl+49, x:356,y:100, height:97, width:39, attr:LSK_Attr},
 		{id:fl+48, x:395,y:100, height:97, width:39, attr:LSK_Attr},
 		{id:fl+47, x:434,y:100, height:97, width:39, attr:LSK_Attr},
@@ -77,8 +77,8 @@ var P32={};
 		
 		{id:fl+40, x:842,y:100, height:97, width:39, attr:LSK_Attr},
 		{id:fl+39, x:881,y:100, height:97, width:39, attr:LSK_Attr},
-		<!-- 4 ряд -->
-		<!-- 3 ряд -->
+		//<!-- 4 ряд -->
+		//<!-- 3 ряд -->
 		{id:fl+27, x:356,y:292, height:83, width:39, attr:LSK_Attr},
 		{id:fl+28, x:395,y:292, height:83, width:39, attr:LSK_Attr},
 		{id:fl+29, x:434,y:292, height:83, width:39, attr:LSK_Attr},
@@ -95,8 +95,8 @@ var P32={};
 		{id:fl+37, x:881,y:292, height:83, width:39, attr:LSK_Attr},
 		
 		{id:fl+38, x:930,y:292, height:88.5, width:56, attr:LSK_Attr},
-		<!-- 3 ряд -->
-		<!-- 2 ряд -->
+		//<!-- 3 ряд -->
+		//<!-- 2 ряд -->
 		{id:fl+26, x:356,y:388, height:83, width:39, attr:LSK_Attr},
 		{id:fl+25, x:395,y:388, height:83, width:39, attr:LSK_Attr},
 		{id:fl+24, x:434,y:388, height:83, width:39, attr:LSK_Attr},
@@ -113,8 +113,8 @@ var P32={};
 		{id:fl+16, x:881,y:388, height:83, width:39, attr:LSK_Attr},
 		
 		{id:fl+15, x:930,y:383, height:88.5, width:56, attr:LSK_Attr},
-		<!-- 2 ряд -->
-		<!-- 1 ряд -->
+		//<!-- 2 ряд -->
+		//<!-- 1 ряд -->
 		{id:fl+1, x:346,y:567.5, height:83, width:39, attr:LSK_Attr},
 		
 		{id:fl+2, x:435,y:567, height:83, width:39, attr:LSK_Attr},
@@ -136,10 +136,10 @@ var P32={};
 		{id:fl+13, x:930,y:567, height:83, width:39, attr:LSK_Attr},
 		{id:fl+14, x:969,y:567, height:83, width:39, attr:LSK_Attr},
 		
-		<!-- 1 ряд -->
-		<!-- 0 ряд -->
+		//<!-- 1 ряд -->
+		//<!-- 0 ряд -->
 		{id:fl+50, t:1, x:179,y:440, height:94, width:57, attr:LSK_Attr},
-		<!-- 0 ряд -->
+		//<!-- 0 ряд -->
 		]
 	return data;
 };
