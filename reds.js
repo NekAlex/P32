@@ -22,7 +22,7 @@ function getSpace(num){
 	return 13.3;
 }
 function getStat(){
-	return greens.reduce(function(a,b){ let et = Math.floor((b-1)/50)+1; console.log(et); a[et]=a[et]+1; return a;},{1:0,2:0,3:0,4:0,5:0,6:0});
+	return greens.reduce(function(a,b){ let et = Math.floor((b-1)/50)+2; console.log(et); a[et]=a[et]+1; return a;},{1:0,2:0,3:0,4:0,5:0,6:0});
 }
 function makeRed(){
 	reds.forEach((arrayElement, index) => {
